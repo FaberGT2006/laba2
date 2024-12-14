@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct mebelniymagazin {
+	char n[100];
+	char p[100];
+	int cena;
+} mebelniymagazin;
+void add(mebelniymagazin **arr, int *r);
+void  output(mebelniymagazin**arr,int *r);
+void search(mebelniymagazin**arr,int *r);
+void swap(mebelniymagazin**arr, int *r);
+void delit(mebelniymagazin**arr, int *r);

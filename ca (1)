@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(){
+int r;
+int ff;
+mebelniymagazin*s;
+while (1) {
+	printf("выберите действие:\n");
+	printf("1-добавление\n");
+	printf("2-вывод\n");
+	printf("3-поиск\n");
+	printf("4-изменение\n");
+	printf("5-удаление\n");
+	printf("6-выход\n");
+	while(scanf("%i",&ff)!=1){
+                printf("vvedite cifru\n");
+                while(getchar() !='\n');
+        }
+	switch (ff){
+		case 1:
+			add(&s,&r);
+			break;
+		case 2:
+			output(&s,&r);
+			break;
+		case 3:
+			search(&s,&r);
+			break;
+		case 4:
+			swap(&s,&r);
+			break;
+		case 5:
+			delit(&s,&r);
+			break;
+		case 6:
+			printf("goodbye\n");
+			return 0;
+			break;
+		default:
+			printf("net takogo varianta\n");
+			break;
+	}
+}
+free(s);
+return 0;
+}
